@@ -143,7 +143,7 @@ const app = {
             if (this.isRandom) {
                 this.currentSelect = Math.floor(Math.random() * (this.songs.length - 1));
             } else {
-                (this.currentSelect === this.songs.length - 1)  ? this.currentSelect = 0 : ++this.currentSelect
+                (this.currentSelect === 0)  ? this.currentSelect = this.songs.length - 1 : --this.currentSelect
             }
             this.render();
             this.playAudio();
